@@ -1,26 +1,82 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
+/*Importação de fonte (Google Fontes)*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-/***** Breakpoints*****/
 
-/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 576px) {
-    body {
-        background-color: green
-    }
+
+/* Css Reset (Compatibilizar com todos os navegadores */ 
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+
+}
+
+/* Layout */
+body{
+    font-family: "Exo 2", sans-serif;
+    font-size: 1em; /* 1em = 100% (tamanho padrão)*/
+
+
+}
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Cabeçalho */
+header {
+    height: 75px;
+    background-color: rgb(253, 145, 186);
+}
+
+#logo img {
+    width: 0;
+    height: 0;
+    margin: 10px 0px 0px 0px; 
+
+}
+
+.container {
+
+    margin: 0 auto; /* centalizar o bloco*/
+    max-width: 540px;
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Smartphone LAndscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+header {
+    height: 75px;
+    background-color: rgb(253, 145, 186);
+
+}
+
+#logo img {
+    width: 0;
+    height: 0;
+    margin: 0 0 0 0; 
+
+}
+
+.container {
+
+    margin: 0 auto; /* centalizar o bloco*/
+}
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 768px) {
-    body {
-        background-color: yellow;
+    /* Cabeçalho */
+    .container {
+        max-width: 720px;
+        background-color: rgb(253, 145, 186);
+    }
+    header {
+        height: 120px;
+    }
+    #logo img {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -29,9 +85,13 @@
 /* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 992px) {
-    body {
-        background-color: cyan;
+    /* Cabeçalho */
+    .container {
+        max-width: 960px;
+        background-color: rgb(253, 145, 186);
+
     }
+
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -39,19 +99,37 @@
 /* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 1200px) {
-    body {
-        background-color: crimson;
-        color: yellowgreen;
+    .container {
+        max-width: 1200px;
+        background-color: rgb(253, 145, 186);
+        }
+        
+        header {
+            height: 150px;
+        }
+        #logo img {
+            width: 128px;
+            height: 128px;
+        }
+
     }
-}
 
 /*Telas FullHD/4k/Smart Tv<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
 @media (min-width: 1400px) {
-    body {
-        background-color: purple;
-        color: white;
-    }
+    .container {
+        max-width: 1360px;
+        background-color: rgb(253, 145, 186);
+        }
+        
+        header {
+            height: 200px;
+        }
+        #logo img {
+            width: 176px;
+            height: 176px;
+        }
+
+    
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
