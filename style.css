@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/*Importação de fonte (Google Fontes)*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Importação da font (google fonts) */
+:root {
+    --rosa: #fd91ba;
+    --branco: #fff;
+    --preto: #000;
+    --rosé: #ffbac4;
+    --vermelho: #bd3131;
+}
+
+
+/* Css Reset (Compatibilizar com todos os navegadores */ 
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Layout */
+body{
+    font-family: "Exo 2", sans-serif;
+    font-size: 1em; /* 1em = 100% (tamanho padrão)*/
+}
+
+.botao { 
+    text-decoration: none;
+    color: var(--rosé);
+    font-size: 1.3em;
+    background-color: var(--rosa);
+    font-weight: 700;
+    width: 100x;
+    padding: 10px 0px;
+    border: 2px solid var(--branco);
+    border-radius: 25px;
+    margin-top: 5px;
+}
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* Cabeçalho */
+header {
+    height: 100px;
+    background-color: rgb(253, 145, 186);
+}
+
+#check {
+    display: none;
+
+}
+
+/* Efeito de deslizar o menu*/
+/* Se check estiver "ticado", criar um estilo para ul */
+#check:checked~ul {
+    right: 0px;
+}
+    
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0,0,0,0, 0.5); /* 0.5 = 50% transparência (0 a 1 = 100%) */
+}
+
+nav ul {
+
+    height: 50vh; /* 100vh - 100% altura da tela */
+    background-color: rgba(255, 255, 255, 0.7);
+    list-style: none; /* remover bullets */
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    transition: all 1.0s;
+
+} 
+
+#logo img {
+    width: 0;
+    height: 0;
+    margin: 10px 0px 0px 0px; 
+
+}
+
+nav ul li {
+    padding: 15px 20px;
+    border-bottom: 5px solid var(--rosa);
+    text-align: right;
+}
+
+nav ul li a {
+    color: var(--preto);
+    text-decoration: none; /*remove o sublinhado*/
+}
+
+.container {
+    margin: 0 auto; /* centalizar o bloco*/
+    max-width: 540px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+/* Nanner */
+main {
+    height: 60vh; /* Ajuste da altura do banner */
+    background: url(img/jogo.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1, h2 {
+    color:var(--branco);
+    text-shadow: #000 0.5em 0.5em 0.5em; /* Sombreamento */
+}
+
+main h1 {
+    font-size: 3em;
+}
+
+main h2 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    }
+
+main a {
+    color: #ff90a0
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+/* Smartphone LAndscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+header {
+    height: 75px;
+    background-color: rgb(253, 145, 186);
+
+}
+
+#logo img {
+    width: 0;
+    height: 0;
+    margin: 0 0 0 0; 
+
+}
+
+.container {
+
+    margin: 0 auto; /* centalizar o bloco*/
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 768px) {
+    /* Cabeçalho */
+    .container {
+        max-width: 720px;
+        background-color: rgb(253, 145, 186);
+    }
+    header {
+        height: 120px;
+    }
+    #logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul {
+        top: 120px;
+        width: 50%;
+        right: -50;
+        background-color: rgba(255, 255, 255, 0.7);
+
+    }
+
+    /* Banner */
+
+    main h1 {
+        font-size: 6em;
+    }
+
+    main h2 {
+        font-size: 2.5em;
+    }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 992px) {
+    /* Cabeçalho */
+    .container {
+        max-width: 960px;
+        background-color: rgb(253, 145, 186);
+
+    }
+
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+/* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        background-color: rgb(253, 145, 186);
+        }
+        
+        header {
+            height: 150px;
+        }
+        #logo img {
+            width: 128px;
+            height: 128px;
+        }
+        /* Transformação do menu */
+        label {
+            display: none;
+        }
+        nav ul {
+            width: 100%;
+            height: auto;
+            position: static;
+            background-color: transparent;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            color: var(--preto);
+        }
+        nav ul li a:hover {
+            color: var(--vermelho);
+        }
+
+        /* Banner */
+        main h1 {
+            font-size: 6em;
+        }
+    } 
+
+/*Telas FullHD/4k/Smart Tv<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1360px;
+        background-color: rgb(253, 145, 186);
+        }
+        
+        header {
+            height: 200px;
+        }
+        #logo img {
+            width: 176px;
+            height: 176px;
+        }
+
+    
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
