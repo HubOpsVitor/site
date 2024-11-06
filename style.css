@@ -32,11 +32,12 @@ body{
     font-size: 1.3em;
     background-color: var(--rosa);
     font-weight: 700;
-    width: 100x;
+    width: 100px;
     padding: 10px 0px;
     border: 2px solid var(--branco);
     border-radius: 25px;
     margin-top: 5px;
+    align-self: center;
 }
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -98,7 +99,6 @@ nav ul li a {
 
 .container {
     margin: 0 auto; /* centalizar o bloco*/
-    max-width: 540px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,9 +139,11 @@ main a {
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /* Smartphone LAndscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 576px) {
 header {
     height: 75px;
-    background-color: rgb(253, 145, 186);
+    background-color: rgb(253, 145, 186); 
+    width: 100%;
 
 }
 
@@ -156,7 +158,7 @@ header {
 
     margin: 0 auto; /* centalizar o bloco*/
 }
-
+}
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -164,7 +166,7 @@ header {
 @media (min-width: 768px) {
     /* Cabeçalho */
     .container {
-        max-width: 720px;
+        max-width: 100%;
         background-color: rgb(253, 145, 186);
     }
     header {
@@ -201,7 +203,7 @@ header {
 @media (min-width: 992px) {
     /* Cabeçalho */
     .container {
-        max-width: 960px;
+        max-width: 100%;
         background-color: rgb(253, 145, 186);
 
     }
@@ -214,16 +216,17 @@ header {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1200px;
+        max-width: 100%;
         background-color: rgb(253, 145, 186);
         }
         
         header {
-            height: 150px;
+            height: 100px;
+            width: 100%;
         }
         #logo img {
-            width: 128px;
-            height: 128px;
+            width: 80px;
+            height: 80px;
         }
         /* Transformação do menu */
         label {
@@ -254,7 +257,7 @@ header {
 /*Telas FullHD/4k/Smart Tv<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 @media (min-width: 1400px) {
     .container {
-        max-width: 1360px;
+        max-width: 100%;
         background-color: rgb(253, 145, 186);
         }
         
