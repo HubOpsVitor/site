@@ -12,6 +12,11 @@
     --vermelho: #bd3131;
 }
 
+.logo {
+    width: 129px;   /* Ou um valor percentual, como 20% */
+    height: auto;   /* Mantém a proporção da imagem */
+  }
+  
 
 /* Css Reset (Compatibilizar com todos os navegadores */ 
 *{
@@ -80,9 +85,9 @@ nav ul {
 } 
 
 #logo img {
-    width: 0;
-    height: 0;
-    margin: 10px 0px 0px 0px; 
+    width: 129px;
+    height: 129px;
+    margin: 7px 0px 0px 10px; 
 
 }
 
@@ -148,9 +153,9 @@ header {
 }
 
 #logo img {
-    width: 0;
-    height: 0;
-    margin: 0 0 0 0; 
+    width: 75px;
+    height: 60px;
+    margin: 6px 0px 0px 10px; 
 
 }
 
