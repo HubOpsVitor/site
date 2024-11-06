@@ -32,13 +32,6 @@ body{
 
 }
 
-/*Ajuste de tamanho dos lados*/
-.container{
-    margin: 0 auto; /*centraliza o bloco*/
-    display: flex;  
-    justify-content: space-between;
-    align-items: center;
-}
 
 .botao { 
     text-decoration: none;
