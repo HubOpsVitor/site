@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-/*Importação de fonte (Google Fontes)*/
+/* Importação de fonte (Google Fontes) */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*Importação da font (google fonts) */
+/* Definindo cores */
 :root {
     --rosa: #fd91ba;
     --branco: #fff;
@@ -13,27 +13,25 @@
 }
 
 .logo {
-    width: 129px;   /* Ou um valor percentual, como 20% */
-    height: auto;   /* Mantém a proporção da imagem */
-  }
-  
+    width: 120px;
+    height: auto;
+}
 
-/* Css Reset (Compatibilizar com todos os navegadores */ 
-*{
+/* Reset de estilos */
+* {
     margin: 0;
     padding: 0;
-    border: 0;
+    box-sizing: border-box;
 }
 
-/* Layout */
-body{
+/* Estilo geral */
+body {
     font-family: "Exo 2", sans-serif;
-    font-size: 1em; /* 1em = 100% (tamanho padrão)*/
-
+    font-size: 1em;
+    background-color: var(--rosé);
 }
 
-
-.botao { 
+.botao {
     text-decoration: none;
     color: var(--rosé);
     font-size: 1.3em;
@@ -47,76 +45,64 @@ body{
     align-self: center;
 }
 
-/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 /* Cabeçalho */
 header {
     height: 100px;
     background-color: rgb(253, 145, 186);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 #check {
     display: none;
-
 }
 
-/* Efeito de deslizar o menu*/
-/* Se check estiver "ticado", criar um estilo para ul */
-#check:checked~ul {
-    right: 0px;
-}
-    
 label {
     font-size: 3em;
     position: fixed;
     top: 5px;
     right: 15px;
-    color: rgba(0,0,0,0, 0.5); /* 0.5 = 50% transparência (0 a 1 = 100%) */
+    color: rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
-
-    height: 50vh; /* 100vh - 100% altura da tela */
+    list-style: none;
     background-color: rgba(255, 255, 255, 0.7);
-    list-style: none; /* remover bullets */
     width: 100%;
     position: fixed;
     top: 100px;
     right: -100%;
+    height: 50vh;
     transition: all 1.0s;
+    padding: 0;
+    text-align: right;
+}
 
-} 
-
-#logo img {
-    width: 129px;
-    height: 129px;
-    margin: 7px 0px 0px 10px; 
-
+#check:checked ~ ul {
+    right: 0px;
 }
 
 nav ul li {
     padding: 15px 20px;
     border-bottom: 5px solid var(--rosa);
-    text-align: right;
 }
 
 nav ul li a {
     color: var(--preto);
-    text-decoration: none; /*remove o sublinhado*/
+    text-decoration: none;
 }
 
 .container {
-    margin: 0 auto; /* centalizar o bloco*/
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
-
-
-/* Nanner */
+/* Banner */
 main {
-    height: 60vh; /* Ajuste da altura do banner */
+    height: 60vh;
     background: url(img/jogo.jpg);
     background-size: cover;
     background-position: center;
@@ -127,8 +113,8 @@ main {
 }
 
 main h1, h2 {
-    color:var(--branco);
-    text-shadow: #000 0.5em 0.5em 0.5em; /* Sombreamento */
+    color: var(--branco);
+    text-shadow: #000 0.5em 0.5em 0.5em;
 }
 
 main h1 {
@@ -138,61 +124,69 @@ main h1 {
 main h2 {
     font-size: 1.5em;
     margin-top: 30px;
-    }
-
-main a {
-    color: #ff90a0
 }
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-/* Smartphone LAndscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 576px) {
-header {
-    height: 75px;
-    background-color: rgb(253, 145, 186); 
+/* Seção de Destaque */
+#destaque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 50px 15px;
+}
+
+#ImagemDestaque {
+    width: 40%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#ImagemDestaque img {
     width: 100%;
-
+    object-fit: cover;
 }
 
-#logo img {
-    width: 75px;
-    height: 60px;
-    margin: 6px 0px 0px 10px; 
-
+#TextoDestaque {
+    width: 50%;
+    margin-left: -50px; /* Aproxima o texto da imagem */
+    color: var(--branco);
 }
 
-.container {
-
-    margin: 0 auto; /* centalizar o bloco*/
+#TextoDestaque h2 {
+    margin-bottom: 20px;
 }
+
+#TextoDestaque p {
+    margin-bottom: 15px;
 }
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
-/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.topicos {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
 
+.topicos img {
+    margin-right: 10px;
+}
+
+.topicos p {
+    font-weight: 600;
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
-    /* Cabeçalho */
-    .container {
-        max-width: 100%;
-        background-color: rgb(253, 145, 186);
-    }
     header {
         height: 120px;
     }
+
     #logo img {
         width: 100px;
-        height: 100px;
     }
 
     nav ul {
         top: 120px;
-        width: 50%;
-        right: -50;
-        background-color: rgba(255, 255, 255, 0.7);
-
     }
-
-    /* Banner */
 
     main h1 {
         font-size: 6em;
@@ -201,83 +195,41 @@ header {
     main h2 {
         font-size: 2.5em;
     }
-}
 
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-@media (min-width: 992px) {
-    /* Cabeçalho */
-    .container {
-        max-width: 100%;
-        background-color: rgb(253, 145, 186);
-
+    #ImagemDestaque img {
+        width: 440px;
+        height: 400px;
     }
 
+    #TextoDestaque {
+        margin-left: -60px; /* Ajuste para telas maiores */
+    }
 }
-
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-/* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 @media (min-width: 1200px) {
-    .container {
-        max-width: 100%;
-        background-color: rgb(253, 145, 186);
-        }
-        
-        header {
-            height: 100px;
-            width: 100%;
-        }
-        #logo img {
-            width: 176px;
-            height: 176px;
-        }
-        /* Transformação do menu */
-        label {
-            display: none;
-        }
-        nav ul {
-            width: 100%;
-            height: auto;
-            position: static;
-            background-color: transparent;
-        }
-        nav ul li {
-            float: left;
-        }
-        nav ul li a {
-            color: var(--preto);
-        }
-        nav ul li a:hover {
-            color: var(--vermelho);
-        }
+    header {
+        height: 100px;
+    }
 
-        /* Banner */
-        main h1 {
-            font-size: 6em;
-        }
-    } 
+    nav ul {
+        position: static;
+        background-color: transparent;
+        padding: 0;
+    }
 
-/*Telas FullHD/4k/Smart Tv<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-@media (min-width: 1400px) {
-    .container {
-        max-width: 100%;
-        background-color: rgb(253, 145, 186);
-        }
-        
-        header {
-            height: 200px;
-        }
-        #logo img {
-            width: 176px;
-            height: 176px;
-        }
+    nav ul li {
+        float: left;
+    }
 
-    
+    nav ul li a:hover {
+        color: var(--vermelho);
+    }
+
+    main h1 {
+        font-size: 6em;
+    }
+
+    #destaque {
+        background-attachment: fixed;
+    }
 }
-
-/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
