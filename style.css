@@ -133,6 +133,7 @@ main h2 {
     justify-content: center;
     background-color: transparent;
     padding: 50px 15px;
+    flex-direction: column; /* Ajuste inicial padrão */
 }
 
 #ImagemDestaque {
@@ -148,8 +149,8 @@ main h2 {
 
 #TextoDestaque {
     width: 50%;
-    margin-left: -50px; /* Aproxima o texto da imagem */
     color: var(--branco);
+    text-align: center;
 }
 
 #TextoDestaque h2 {
@@ -164,6 +165,7 @@ main h2 {
     display: flex;
     align-items: center;
     margin-top: 5px;
+    justify-content: center;
 }
 
 .topicos img {
@@ -175,37 +177,66 @@ main h2 {
 }
 
 /* Media Queries */
-@media (min-width: 768px) {
-    header {
-        height: 120px;
+
+/* Smartphone Portrait (vertical) - Imagem em cima e texto embaixo */
+@media (max-width: 767px) {
+    #destaque {
+        flex-direction: column;
+        text-align: center;
     }
 
-    #logo img {
-        width: 100px;
+    #destaque .container{
+        flex-direction: column;
+        align-items: center;
+    
     }
 
-    nav ul {
-        top: 120px;
-    }
-
-    main h1 {
-        font-size: 6em;
-    }
-
-    main h2 {
-        font-size: 2.5em;
-    }
-
-    #ImagemDestaque img {
-        width: 440px;
-        height: 400px;
+    #ImagemDestaque {
+        margin-bottom: 20px;
+        width: 60%;
     }
 
     #TextoDestaque {
-        margin-left: -60px; /* Ajuste para telas maiores */
+        width: 90%;
     }
 }
 
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 991px) {
+    #destaque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #ImagemDestaque {
+        margin-bottom: 20px;
+        width: 60%;
+    }
+
+    #TextoDestaque {
+        width: 90%;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #destaque {
+        flex-direction: row;
+    }
+
+    #ImagemDestaque {
+        width: 40%;
+        margin-right: 50px;
+    }
+
+    #TextoDestaque {
+        width: 50%;
+        text-align: left;
+        margin-left: -60px;
+    }
+}
+
+/* PCs e Notebooks */
 @media (min-width: 1200px) {
     header {
         height: 100px;
@@ -231,5 +262,30 @@ main h2 {
 
     #destaque {
         background-attachment: fixed;
+        flex-direction: row;
+    }
+
+    #ImagemDestaque {
+        width: 40%;
+    }
+
+    #TextoDestaque {
+        width: 50%;
+        margin-left: -60px;
+    }
+}
+
+/* Telas FullHD e SmartTV */
+@media (min-width: 1400px) {
+    header {
+        height: 200px;
+    }
+
+    #ImagemDestaque {
+        width: 50%;
+    }
+
+    #TextoDestaque {
+        width: 50%;
     }
 }
