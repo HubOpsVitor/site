@@ -18,7 +18,7 @@
 }
 
 /* Reset de estilos */
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,6 +29,14 @@ body {
     font-family: "Exo 2", sans-serif;
     font-size: 1em;
     background-color: var(--rosé);
+}
+
+/*Ajuste de tamanho dos lados*/
+.container{
+   /* margin:  auto; centraliza o bloco*/
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
 }
 
 .botao {
@@ -49,12 +57,12 @@ body {
 header {
     height: 100px;
     background-color: rgb(253, 145, 186);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
+header .container {
+    max-height: 80px;
+}
 #check {
     display: none;
 }
@@ -83,6 +91,16 @@ nav ul {
 #check:checked ~ ul {
     right: 0px;
 }
+
+label {
+    font-size: 3em;
+    position: fixed;
+    top: 5px;
+    right: 15px;
+    color: rgba(0,0,0,0, 0.5); /* 0.5 = 50% transparência (0 a 1 = 100%) */
+}
+
+
 
 nav ul li {
     padding: 15px 20px;
@@ -238,27 +256,53 @@ main h2 {
 
 /* PCs e Notebooks */
 @media (min-width: 1200px) {
-    header {
-        height: 100px;
-    }
+    /*cabeçalho */
+  header  {
+       height: 80px; /*Altura*/
+  }
+  #logo img{
+       width: 1000px; /*Largura*/
+       height: 1000px; /*Altura*/
+  }
+  .container{    
+       max-width: 1140px; /*Tamanho max */
+      /* background-color: #FFA500; Cor*/   
+      
 
-    nav ul {
-        position: static;
-        background-color: transparent;
-        padding: 0;
-    }
+  }
+  /*transformaçã do menu*/
+  label{
+   display: none;
+  }
 
-    nav ul li {
-        float: left;
-    }
+  
+  nav ul{
 
-    nav ul li a:hover {
-        color: var(--vermelho);
-    }
+   width: 100%;
+   height: auto;
+   position: static;
+   background-color: transparent; /*remover a cor do background-color*/
 
-    main h1 {
-        font-size: 6em;
-    }
+  }
+  
+  nav ul li{
+   float: left;
+   border: 0;
+
+   }
+
+       nav ul li a {
+   color: var(--azul)
+   }
+   
+   nav ul li a:hover {
+   color: var(--vermelho);
+   }
+
+   /*Ajuste do banner*/
+   main h1{
+   font-size: 7.5em;
+   }
 
     #destaque {
         background-attachment: fixed;
@@ -277,6 +321,11 @@ main h2 {
 
 /* Telas FullHD e SmartTV */
 @media (min-width: 1400px) {
+    .container {
+        max-width: 12;
+    }
+
+
     header {
         height: 200px;
     }
