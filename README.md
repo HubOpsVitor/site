@@ -4,3 +4,6 @@
 Estudo do HTML5 e CSS3
 ## Autor
 Allan Vítor S.S.
+
+## Site 
+![](img/qrcode.png)
