@@ -97,7 +97,7 @@ label {
     position: fixed;
     top: 5px;
     right: 15px;
-    color: rgba(0,0,0,0, 0.5); /* 0.5 = 50% transparência (0 a 1 = 100%) */
+    color: rgba(0,0,0, 0.5); /* 0.5 = 50% transparência (0 a 1 = 100%) */
 }
 
 
@@ -193,6 +193,16 @@ main h2 {
 .topicos p {
     font-weight: 600;
 }
+#sobre .container{
+    flex-direction: row;
+    align-items: center;
+    
+}
+#video iframe {
+    margin: 0px;
+    background-attachment: fixed;
+ }
+
 
 /* Media Queries */
 
@@ -292,7 +302,7 @@ main h2 {
    }
 
        nav ul li a {
-   color: var(--azul)
+   color: var(--azul);
    }
    
    nav ul li a:hover {
@@ -322,9 +332,19 @@ main h2 {
 /* Telas FullHD e SmartTV */
 @media (min-width: 1400px) {
     .container {
-        max-width: 12;
+        max-width: 1400px;
     }
-
+    
+    #sobre .container{
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    #video iframe {
+        margin: 0px;
+        background-attachment: fixed;
+     }
+    
 
     header {
         height: 200px;
