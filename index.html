@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Origami Antivírus - Solução antivírus para gamers, com foco em desempenho e proteção.">
+    <meta name="description"
+        content="Origami Antivírus - Solução antivírus para gamers, com foco em desempenho e proteção.">
+    <meta name="author" content="Origami">
     <title>Origami - Um Antivírus para Gamers</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -15,70 +17,148 @@
     <header>
         <div class="container">
             <!-- Logotipo -->
-            <div>
+            <a href="#" aria-label="Ir para a página inicial">
                 <img src="img/favicon.png" alt="Logotipo da Origami" class="logo">
-            </div>
+            </a>
             <!-- Menu -->
             <nav>
                 <input type="checkbox" id="check">
-                <label for="check">&#x268c;</label>
+                <label for="check">&#x268C;</label>
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Conteúdo</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#destaque">Destaques</a></li>
+                    <li><a href="#faixaDestaque">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Main -->
-    <main>
-        <h1>Origami Antivírus</h1>
-        <h2>Um antivírus para gamers</h2>
-        <a href="https://github.com/HubOpsVItor" class="botao">Saiba mais</a>
+    <!-- Seção Principal -->
+    <main id="inicio">
+        <h1>Origami App</h1>
+        <h2>A mão-amiga dos gamers</h2>
+        <a href="https://youtu.be/RMNjO-rFGX4?si=Wivb46P2E82xDVvT" class="botao">Partiu jogar?</a>
     </main>
 
-    <!-- Seção de destaques -->
+    <!-- Seção de Destaques -->
     <section id="destaque">
         <div class="container">
             <!-- Imagem de destaque -->
             <div id="ImagemDestaque">
-                <img src="img/bola.jpg" alt="PC Gamer com acessórios para jogos">
+                <img src="img/bola.jpeg" alt="PC Gamer com acessórios para jogos">
             </div>
             <!-- Texto de destaque -->
             <div id="TextoDestaque">
                 <h2>Uma ferramenta para Gamers</h2>
-                <p>Quer uma ferramenta para ajudar a te dar uma leve mãozinha durante a jogatina? <br>Conte conosco para te ajudar a mergulhar de cabeça no mundo dos jogos.</p>
-                
+                <p>Quer uma ferramenta para ajudar a te dar uma leve mãozinha durante a jogatina? <br>Conte conosco para
+                    te ajudar a mergulhar de cabeça no mundo dos jogos.</p>
+
                 <div class="topicos">
                     <img src="img/icon-1.png" alt="Ícone de ferramentas">
-                    <p>Ferramentas</p>
+                    <p>Ferramentas e funcionalidades</p>
                 </div>
-                
+
                 <div class="topicos">
                     <img src="img/icon-3.png" alt="Ícone de desempenho">
-                    <p>Maior desempenho de aplicações</p>
+                    <p>Maior desempenho em jogos</p>
                 </div>
-                
+
                 <div class="topicos">
                     <img src="img/icon-2.png" alt="Ícone de proteção contra vírus">
-                    <p>Proteção contra vírus</p>
+                    <p>Zelo especial com a comunidade gamer</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção sobre -->
+    <!-- Seção Sobre -->
     <section id="sobre">
         <div class="container">
             <div id="institucional">
                 <h2>Origami</h2>
-                <p>Sempre focando em oferecer o melhor para os gamers, nossa missão é proporcionar conforto, qualidade e desempenho para que o seu PC Gamer esteja à altura das suas expectativas. Sabemos que cada detalhe faz a diferença, desde a fluidez nas partidas até a ergonomia durante longas sessões de jogo. Por isso, trabalhamos para garantir uma experiência completa, combinando tecnologia, design funcional e soluções personalizadas que elevam seu nível de imersão e performance.</p>
+                <p>Sempre focando em oferecer o melhor para os gamers, nossa missão é proporcionar conforto, qualidade e
+                    desempenho para que o seu PC Gamer esteja à altura das suas expectativas. Sabemos que cada detalhe
+                    faz a diferença, desde a fluidez nas partidas até a ergonomia durante longas sessões de jogo. Por
+                    isso, trabalhamos para garantir uma experiência completa, combinando tecnologia, design funcional e
+                    soluções personalizadas que elevam seu nível de imersão e performance.</p>
             </div>
             <div id="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/RTX2T4d2w84?si=N7C6hRHElqhxXXHb" title="Game" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RTX2T4d2w84?si=N7C6hRHElqhxXXHb"
+                    title="Game" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
+        </div>
+    </section>
+
+    <!-- Seção Faixa de Destaque -->
+    <section id="faixaDestaque">
+        <div class="container">
+            <div id="imagemFaixa">
+                <img src="img/youtube.png" alt="Logo do YouTube">
+            </div>
+            <div id="textoFaixa">
+                <h2>Cola pra conferir mais um pouco do trampo da Origami!</h2>
+                <p>Acompanhe de perto todas as novidades e não perca nenhum detalhe sobre o Origami App!<br>
+                    Fique por dentro das atualizações mais recentes que garantem melhorias contínuas para sua
+                    experiência,<br>
+                    descubra as novas parcerias que trazem ainda mais valor para a comunidade gamer e explore conteúdos
+                    exclusivos<br>
+                    criados especialmente para você. Além disso, fique atento a eventos, promoções, dicas e muitas
+                    outras coisas<br>
+                    legais que tornam o Origami App o companheiro ideal para maximizar seu desempenho e proteger seu
+                    mundo digital.<br>
+                    Não perca nenhuma oportunidade de fazer parte dessa evolução!
+                </p>
+
+                <a href="http://youtube.com/@allangotosleep" target="_blank" class="botao">Inscrever-se</a>
+            </div>
+        </div>
+    </section>
+    <!-- Conteúdo (Cartões) -->
+    <section id="conteudo">
+        <div class="container">
+            <h2>Conteúdo</h2>
+            <div class="containerCards">
+                <div class="card">
+                    <img src="img/cpu.png" alt="cpu">
+                    <h3>Hora de tunar isso aí!</h3>
+                    <p>Contamos com um atendimento inteligente baseado em IA<br>
+                        que ajuda você a escolher as melhores peças para o seu setup. Analisando<br>
+                        as especificações atuais do seu computador, a IA identifica componentes<br>
+                        compatíveis e faz recomendações personalizadas, seja para upgrades,<br>
+                        substituições ou melhorias. Tudo é ajustado de<br>
+                        acordo com suas necessidades, garantindo as melhores escolhas sem<br>
+                        complicações.
+                    </p>
+                    <br> <!-- Quebra de linha -->
+                </div>
+                <div class="card">
+                    <img src="img/video.png" alt="video">
+                    <h3>Eu posso rodar isso?</h3>
+                    <p>Contamos com uma funcionalidade incrível que permite<br>
+                        verificar se o seu PC está pronto para rodar seus jogos favoritos.<br>
+                        Com poucos cliques, você pode analisar o desempenho do hardware, como<br>
+                        CPU, GPU e RAM, comparando-o com os requisitos dos jogos. Essa<br>
+                        ferramenta garante que você tenha a melhor experiência, sem surpresas<br>
+                        indesejadas, tudo em uma interface simples e integrada.
+
+                    </p>
+                    <br>
+                </div>
+                <div class="card">
+                    <img src="img/hardware.png" alt="hardware">
+                    <h3>Controle dos coolers</h3>
+                    <p>O Origami App oferece monitoramento dos coolers do seu PC, permitindo<br>
+                        acompanhar a velocidade dos ventiladores e manter o sistema em<br>
+                        temperaturas seguras. Assim, você evita superaquecimento e garante<br>
+                        máxima performance, tudo de forma simples no painel do app.
+
+                    </p>
+                </div>
+            </div>
+            <a href="#" id="todos">Pra saber mais >></a>
         </div>
     </section>
 </body>
