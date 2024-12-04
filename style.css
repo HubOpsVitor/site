@@ -29,6 +29,12 @@
 }
 
 /* Estilo geral */
+
+html {
+    /* rolagem suave do conteúdo */
+    scroll-behavior: smooth;
+    }
+    
 body {
     font-family: "Exo 2", sans-serif;
     font-size: 1em;
@@ -293,9 +299,98 @@ p {
 
 }
 
-/* fim/    Media Queries */
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
 
-/* Smartphone Portrait (vertical) - Imagem em cima e texto embaixo */
+/* Estilo Geral do Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Contato */
+.rodape-contato h2,
+.rodape-redes h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.rodape-contato .contato-item,
+.rodape-redes .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.rodape-contato img,
+.rodape-redes img {
+    width: 30px;
+    height: 30px;
+}
+
+.rodape-contato a,
+.rodape-redes a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape-contato a:hover,
+.rodape-redes a:hover {
+    color: #00acee; /* Cor de destaque no hover */
+}
+
+/* Redes Sociais */
+.rodape-redes .social-icons p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Botão "Topo" */
+.rodape-topo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape-topo a:hover {
+    color: #00acee;
+}
+
+.rodape-topo img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+
+/* Fim do Layout <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/****** Cabeçalho ******/
 @media (max-width: 767px) {
     #destaque {
         flex-direction: column;
@@ -375,9 +470,57 @@ p {
 
 }
 
+/* Fim | Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>*/
 
 
-/* Tablet Portrait */
+/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 576px) {
+
+    /****** Layout ******/
+    .container {
+        max-width: 540px;
+        /* background-color: #ffff00;*/
+    }
+
+    /****** Cabeçalho ******/
+    nav ul {
+        right: -25%;
+        width: 25%;
+    }
+
+    /****** Banner ******/
+    main {
+        height: 100vh;
+    }
+
+    main h1 {
+        font-size: 3em;
+    }
+
+    /****** destaque ******/
+    #destaque .container {
+        flex-direction: row;
+    }
+
+    #imagemDestaque {
+        margin-right: 50px;
+    }
+
+    #imagemDestaque img {
+        width: 256px;
+        height: 256px;
+    }
+
+    /****** Sobre ******/
+    #video iframe {
+        width: 560px;
+        height: 315px;
+    }
+}
+
+/* Fim | Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>*/
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 768px) and (max-width: 991px) {
     #destaque {
         flex-direction: column;
@@ -434,7 +577,10 @@ p {
 }
 
 
-/* Tablet Landscape */
+/* Fim | Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 992px) and (max-width: 1199px) {
     #destaque {
         flex-direction: row;
@@ -487,8 +633,10 @@ p {
     }
 
 }
+/* Fim | Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
-/* PCs e Notebooks */
+
+/* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px) {
 
     /*cabeçalho */
@@ -582,9 +730,14 @@ p {
     #conteudo .containerCards {
         flex-direction: row;
         gap: 20px;
+        
+    
     }
 
 }
+
+/* Fim | PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
 
 /* Telas FullHD e SmartTV */
 @media (min-width: 1400px) {
@@ -637,4 +790,6 @@ p {
     #TextoDestaque {
         width: 50%;
     }
+
 }
+/* Fim | Telas Grandes (FullHD / 4K / SmartTV) >>>>>*/
