@@ -495,7 +495,7 @@ footer .container {
 
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 576px) {
+@media (min-width: 596px) {
 
     /****** Layout ******/
     .container {
@@ -591,9 +591,24 @@ footer .container {
         margin-top: 20px;
     }
 
+ 
     /****** Seção de conteúdo - cards ******/
     .card {
         margin: 25px 10px 0px 10px;
+    }
+      /* Seção Destaque */
+
+      #conteudo .container {
+        flex-direction: column;
+        margin-right: 20px;
+        padding-bottom: 30px;
+        margin-left: 100px;
+
+    }
+
+    #conteudo .containerCards {
+        gap: 20px;
+        padding-bottom: 30px;
     }
 }
 
