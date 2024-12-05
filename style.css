@@ -33,8 +33,8 @@
 html {
     /* rolagem suave do conteúdo */
     scroll-behavior: smooth;
-    }
-    
+}
+
 body {
     font-family: "Exo 2", sans-serif;
     font-size: 1em;
@@ -354,7 +354,8 @@ p {
 
 .rodape-contato a:hover,
 .rodape-redes a:hover {
-    color: #00acee; /* Cor de destaque no hover */
+    color: #00acee;
+    /* Cor de destaque no hover */
 }
 
 /* Redes Sociais */
@@ -385,6 +386,18 @@ p {
     margin-right: 5px;
 }
 
+footer {
+    background-color: #222;
+}
+
+footer .container {
+    flex-direction: column;
+}
+
+#redesocial {
+    margin-right: 200px;
+    padding-top: 10px;
+}
 
 /* Fim do Layout <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
@@ -460,12 +473,20 @@ p {
         font-size: 1.25em;
         font-weight: 700;
     }
+    
+    #redesocial {
+        margin-left: 85px;
+        padding-top: 10px;
+        
+    }
+    
 
     .containerCards {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
 
+   
     }
 
 }
@@ -633,6 +654,7 @@ p {
     }
 
 }
+
 /* Fim | Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
 
@@ -732,14 +754,19 @@ p {
         margin-right: 20px;
         padding-bottom: 30px;
         margin-left: 100px;
-        
-    
+
+
     }
 
     #conteudo .containerCards {
-    gap: 20px;
-    padding-bottom: 30px;
-}
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    #redesocial {
+        margin-left: 85px;
+        padding-top: 10px;
+    }
 
 }
 
@@ -799,4 +826,5 @@ p {
     }
 
 }
+
 /* Fim | Telas Grandes (FullHD / 4K / SmartTV) >>>>>*/
