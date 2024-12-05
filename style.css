@@ -306,7 +306,7 @@ p {
 }
 
 /* Estilo Geral do Rodapé */
-footer {
+#contato {
     background-color: #222;
     color: #fff;
     padding: 20px 0;
@@ -314,7 +314,7 @@ footer {
     font-family: Arial, sans-serif;
 }
 
-footer .container {
+#contato .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -325,8 +325,8 @@ footer .container {
 }
 
 /* Contato */
-.rodape-contato h2,
-.rodape-redes h2 {
+.contato-contato h2,
+.contato-redes h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -335,7 +335,7 @@ footer .container {
 .rodape-redes .social-icons {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     margin: 5px 0;
 }
 
@@ -727,12 +727,19 @@ footer .container {
 
     /* Seção Destaque */
 
-    #conteudo .containerCards {
-        flex-direction: row;
-        gap: 20px;
+    #conteudo .container {
+        flex-direction: column;
+        margin-right: 20px;
+        padding-bottom: 30px;
+        margin-left: 100px;
         
     
     }
+
+    #conteudo .containerCards {
+    gap: 20px;
+    padding-bottom: 30px;
+}
 
 }
 
