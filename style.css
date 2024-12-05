@@ -165,6 +165,7 @@ main h2 {
     background-color: transparent;
     padding: 50px 15px;
     flex-direction: column;
+    background-color: #eb8baf;
     /* Ajuste inicial padrão */
 }
 
@@ -230,7 +231,9 @@ p {
 }
 
 #faixaDestaque {
-    background: url(img/);
+    display: flex;
+    justify-content: center;
+    background-color: #eb8baf;
     background-size: cover;
     background-position: center;
     padding: 50px 15px;
@@ -770,8 +773,8 @@ footer .container {
         padding-bottom: 30px;
         margin-left: 100px;
 
-
     }
+
 
     #conteudo .containerCards {
         gap: 20px;
