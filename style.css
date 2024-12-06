@@ -1,848 +1,229 @@
-@charset "UTF-8";
-
-/* Importação de fonte (Google Fontes) */
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Definindo cores */
-:root {
-    --rosa: #fd91ba;
-    --branco: #fff;
-    --preto: #000;
-    --rosé: #ffbac4;
-    --vermelho: #bd3131;
-    --rosachoque: #f869a0;
-    --cinza: #e0759e;
-
-
-}
-
-.logo {
-    width: 120px;
-    height: auto;
-}
-
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilo geral */
-
-html {
-    /* rolagem suave do conteúdo */
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: "Exo 2", sans-serif;
-    font-size: 1em;
-    background-color: var(--rosé);
-}
-
-/*Ajuste de tamanho dos lados*/
-.container {
-    /* margin:  auto; centraliza o bloco*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.botao {
-    text-decoration: none;
-    color: var(--rosé);
-    font-size: 1.0em;
-    background-color: var(--rosa);
-    font-weight: 650;
-    width: 100px;
-    padding: 8px 5px;
-    border: 2px solid var(--branco);
-    border-radius: 25px;
-    margin-top: 5px;
-    align-self: center;
-}
-
-/* Cabeçalho */
-header {
-    height: 100px;
-    background-color: rgb(253, 145, 186);
-    padding: 0 30px;
-}
-
-header .container {
-    max-height: 100px;
-}
-
-#check {
-    display: none;
-}
-
-label {
-    font-size: 3em;
-    position: fixed;
-    top: 5px;
-    right: 15px;
-    color: rgba(0, 0, 0, 0.5);
-}
-
-nav ul {
-    list-style: none;
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 100%;
-    position: fixed;
-    top: 100px;
-    right: -100%;
-    height: 50vh;
-    transition: all 1.0s;
-    padding: 0;
-    text-align: right;
-}
-
-#check:checked~ul {
-    right: 0px;
-}
-
-label {
-    font-size: 3em;
-    position: fixed;
-    top: 5px;
-    right: 15px;
-    color: rgba(0, 0, 0, 0.5);
-    /* 0.5 = 50% transparência (0 a 1 = 100%) */
-}
-
-
-
-nav ul li {
-    padding: 15px 20px;
-    border-bottom: 5px solid var(--rosa);
-}
-
-nav ul li a {
-    color: var(--preto);
-    text-decoration: none;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Banner */
-main {
-    height: 60vh;
-    background: url(img/jogo.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-main h1,
-h2 {
-    color: var(--branco);
-    /* text-shadow: #000 0.5em 0.5em 0.5em;*/
-}
-
-main h1 {
-    font-size: 3em;
-}
-
-main h2 {
-    font-size: 1.5em;
-    margin-top: 30px;
-}
-
-/* Seção de Destaque */
-#destaque {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    padding: 50px 15px;
-    flex-direction: column;
-    background-color: #eb8baf;
-    /* Ajuste inicial padrão */
-}
-
-#ImagemDestaque {
-    width: 40%;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-#ImagemDestaque img {
-    width: 100%;
-    object-fit: cover;
-}
-
-#TextoDestaque {
-    width: 50%;
-    color: var(--branco);
-    text-align: center;
-}
-
-#TextoDestaque h2 {
-    margin-bottom: 20px;
-}
-
-#TextoDestaque p {
-    margin-bottom: 15px;
-}
-
-.topicos {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-    justify-content: center;
-}
-
-.topicos img {
-    margin-right: 10px;
-}
-
-.topicos p {
-    font-weight: 600;
-}
-
-#sobre .container {
-    flex-direction: row;
-    align-items: center;
-
-}
-
-#video iframe {
-    margin: 0px;
-    background-attachment: fixed;
-}
-
-#sobre h2,
-p {
-    color: var(--branco);
-}
-
-#sobre h2 {
-    margin-bottom: 10px;
-    text-shadow: none;
-}
-
-#faixaDestaque {
-    display: flex;
-    justify-content: center;
-    background-color: #eb8baf;
-    background-size: cover;
-    background-position: center;
-    padding: 50px 15px;
-}
-
-#faixaDestaque .container {
-    flex-direction: column;
-}
-
-#textoFaixa h2 {
-    color: var(--branco);
-    margin-bottom: 15px;
-}
-
-#textoFaixa p {
-    margin-bottom: 50px;
-
-}
-
-#imagemFaixa img {
-
-    height: 300px;
-    width: 300px;
-
-}
-
-/* Layout para 3 cartões */
-.card {
-    width: 338px;
-    height: 520px;
-    margin-top: 25px;
-    background-color: var(--cinza);
-    border: 1px solid var(--rosachoque);
-    border-radius: 25px;
-    text-align: center;
-}
-
-.card img {
-    border-radius: 25px 25px 0px 0px;
-}
-
-.card h3 {
-
-    margin-top: 15px;
-
-}
-
-.card p {
-    text-align: justify;
-    padding: 10px 30px 50px 30px;
-    font-size: 13px;
-
-}
-
-.card a {
-    padding: 10px 100px;
-    border: 0;
-    background-color: var(--rosachoque);
-    color: var(--azulEscuro);
-}
-
-.containerCards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
-#topo {
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-}
-
-/* Estilo Geral do Rodapé */
-#contato {
-    background-color: #222;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
-#contato .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-/* Contato */
-.contato-contato h2,
-.contato-redes h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.rodape-contato .contato-item,
-.rodape-redes .social-icons {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin: 5px 0;
-}
-
-.rodape-contato img,
-.rodape-redes img {
-    width: 30px;
-    height: 30px;
-}
-
-.rodape-contato a,
-.rodape-redes a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.rodape-contato a:hover,
-.rodape-redes a:hover {
-    color: #00acee;
-    /* Cor de destaque no hover */
-}
-
-/* Redes Sociais */
-.rodape-redes .social-icons p {
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Botão "Topo" */
-.rodape-topo a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.rodape-topo a:hover {
-    color: #00acee;
-}
-
-.rodape-topo img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
-footer {
-    background-color: #222;
-}
-
-footer .container {
-    flex-direction: column;
-}
-
-#redesocial {
-    margin-right: 200px;
-    padding-top: 10px;
-}
-
-/* Fim do Layout <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
-
-/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-/****** Cabeçalho ******/
-@media (max-width: 767px) {
-    #destaque {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #destaque .container {
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-    #ImagemDestaque {
-        margin-bottom: 20px;
-        width: 60%;
-    }
-
-    #sobre .container {
-        flex-direction: column;
-    }
-
-    #sobre {
-        padding: 50px 15px;
-    }
-
-    #sobre h2,
-    p {
-        color: var(--branco);
-    }
-
-    #sobre h2 {
-        font-size: 80px;
-        margin-bottom: 20px;
-    }
-
-    #video iframe {
-        width: 340px;
-        height: 191px;
-        margin-top: 20px;
-    }
-
-    #TextoDestaque {
-        width: 90%;
-    }
-
-    /****** Seção de conteúdo (cards) ******/
-    #conteudo {
-        padding: 50px 0px;
-
-    }
-
-    #conteudo .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #conteudo h2 {
-        color: var(--rosachoque);
-        margin-bottom: 25px;
-
-    }
-
-    #todos {
-        color: var(--rosachoque);
-        margin-top: 50px;
-        text-decoration: none;
-        font-size: 1.25em;
-        font-weight: 700;
-    }
-    
-    #redesocial {
-        margin-left: 85px;
-        padding-top: 10px;
-        
-    }
-    
-
-    .containerCards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-   
-    }
-
-}
-
-/* Fim | Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>*/
-
-
-/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 596px) {
-
-    /****** Layout ******/
-    .container {
-        max-width: 540px;
-        /* background-color: #ffff00;*/
-    }
-
-    /****** Cabeçalho ******/
-    nav ul {
-        right: -25%;
-        width: 25%;
-    }
-
-    /****** Banner ******/
-    main {
-        height: 100vh;
-    }
-
-    main h1 {
-        font-size: 3em;
-    }
-
-    /****** destaque ******/
-    #destaque .container {
-        flex-direction: row;
-    }
-
-    #imagemDestaque {
-        margin-right: 50px;
-    }
-
-    #imagemDestaque img {
-        width: 256px;
-        height: 256px;
-    }
-
-    /****** Sobre ******/
-    #video iframe {
-        width: 560px;
-        height: 315px;
-    }
-}
-
-/* Fim | Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>*/
-
-/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 768px) and (max-width: 991px) {
-    #destaque {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #ImagemDestaque {
-        margin-bottom: 20px;
-        width: 60%;
-    }
-
-    #TextoDestaque {
-        width: 90%;
-    }
-
-    #sobre .container {
-        flex-direction: row;
-        align-items: center;
-
-    }
-
-    #video iframe {
-        margin: 10px;
-        background-attachment: fixed;
-    }
-
-
-    #sobre h2,
-    p {
-        font-size: 16px;
-        color: var(--branco);
-        padding: 5px 50px;
-
-
-    }
-
-    #sobre h2 {
-        font-size: 75px;
-        margin-bottom: 15px;
-        text-shadow: none;
-
-    }
-
-    #video iframe {
-        width: 385px;
-        height: 215px;
-        margin-top: 20px;
-    }
-
- 
-    /****** Seção de conteúdo - cards ******/
-    .card {
-        margin: 25px 10px 0px 10px;
-    }
-      /* Seção Destaque */
-
-      #conteudo .container {
-        flex-direction: column;
-        margin-right: 20px;
-        padding-bottom: 30px;
-        margin-left: 100px;
-
-    }
-
-    #conteudo .containerCards {
-        gap: 20px;
-        padding-bottom: 30px;
-    }
-}
-
-
-/* Fim | Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-
-/* Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 992px) and (max-width: 1199px) {
-    #destaque {
-        flex-direction: row;
-    }
-
-    #ImagemDestaque {
-        width: 40%;
-        margin-right: 50px;
-    }
-
-    #TextoDestaque {
-        width: 50%;
-        text-align: left;
-        margin-left: -60px;
-    }
-
-    #sobre .container {
-        flex-direction: row;
-        align-items: center;
-
-    }
-
-    #video iframe {
-        margin: 0px;
-        background-attachment: fixed;
-    }
-
-
-    #sobre h2,
-    p {
-        font-size: 16px;
-        color: var(--branco);
-        padding: 5px 100px;
-
-
-    }
-
-    #sobre h2 {
-        font-size: 70px;
-        margin-bottom: 10px;
-        text-shadow: none;
-        padding: 0px 50px;
-
-    }
-
-    #video iframe {
-        width: 455px;
-        height: 275px;
-        margin-top: 20px;
-    }
-
-}
-
-/* Fim | Tablet Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-
-/* PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 1200px) {
-
-    /*cabeçalho */
-    header {
-        height: 80px;
-        /*Altura*/
-
-    }
-
-    #logo img {
-        width: 1000px;
-        /*Largura*/
-        height: 1000px;
-        /*Altura*/
-    }
-
-    .container {
-        max-width: 1140px;
-        /*Tamanho max */
-        /* background-color: #FFA500; Cor*/
-
-
-    }
-
-    /*transformaçã do menu*/
-    label {
-        display: none;
-    }
-
-
-    nav ul {
-
-        width: 100%;
-        height: auto;
-        position: static;
-        background-color: transparent;
-        /*remover a cor do background-color*/
-
-    }
-
-    nav ul li {
-        float: left;
-        border: 0;
-
-    }
-
-    nav ul li a {
-        color: var(--azul);
-    }
-
-    nav ul li a:hover {
-        color: var(--vermelho);
-    }
-
-    /*Ajuste do banner*/
-    main h1 {
-        font-size: 7.5em;
-    }
-
-    #destaque {
-        background-attachment: fixed;
-        flex-direction: row;
-    }
-
-    #ImagemDestaque {
-        width: 40%;
-    }
-
-    #TextoDestaque {
-        width: 50%;
-        margin-left: -60px;
-    }
-
-    /***** Faixa de destaque ******/
-    #faixaDestaque {
-        background-attachment: fixed;
-    }
-
-    #faixaDestaque .container {
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-
-    #imagemFaixa img {
-        width: 200px;
-        height: 200px;
-    }
-
-    /* Seção Destaque */
-
-    #conteudo .container {
-        flex-direction: column;
-        margin-right: 20px;
-        padding-bottom: 30px;
-        margin-left: 100px;
-
-    }
-
-
-    #conteudo .containerCards {
-        gap: 20px;
-        padding-bottom: 30px;
-    }
-
-    #redesocial {
-        margin-left: 85px;
-        padding-top: 10px;
-    }
-
-}
-
-/* Fim | PCs / Notebooks >>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-
-/* Telas FullHD e SmartTV */
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1400px;
-    }
-
-    #sobre .container {
-        flex-direction: row;
-        align-items: center;
-
-    }
-
-    #video iframe {
-        margin: 0px;
-        background-attachment: fixed;
-    }
-
-
-    #sobre h2,
-    p {
-        font-size: 16px;
-        color: var(--branco);
-        padding: 0px 50px;
-
-
-    }
-
-    #sobre h2 {
-        font-size: 100px;
-        margin-bottom: 10px;
-        text-shadow: none;
-
-    }
-
-    #video iframe {
-        width: 560px;
-        height: 315px;
-        margin-top: 20px;
-    }
-
-    header {
-        height: 100px;
-    }
-
-    #ImagemDestaque {
-        width: 50%;
-    }
-
-    #TextoDestaque {
-        width: 50%;
-    }
-
-}
-
-/* Fim | Telas Grandes (FullHD / 4K / SmartTV) >>>>>*/
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Origami Antivírus - Solução antivírus para gamers, com foco em desempenho e proteção.">
+    <meta name="author" content="Origami">
+    <title>Origami</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <!-- Logotipo -->
+            <a href="#" aria-label="Ir para a página inicial">
+                <img src="img/favicon.png" alt="Logotipo da Origami" class="logo">
+            </a>
+            <!-- Menu -->
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check">&#x268C;</label>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Destaques</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal -->
+    <main id="inicio">
+        <h1>Origami App</h1>
+        <h2>A mão-amiga dos gamers</h2>
+        <a href="https://youtu.be/RMNjO-rFGX4?si=Wivb46P2E82xDVvT" class="botao">Partiu jogar?</a>
+    </main>
+
+    <!-- Seção de Destaques -->
+    <section id="destaque">
+        <div class="container">
+            <!-- Imagem de destaque -->
+            <div id="ImagemDestaque">
+                <img src="img/bola.jpeg" alt="PC Gamer com acessórios para jogos">
+            </div>
+            <!-- Texto de destaque -->
+            <div id="TextoDestaque">
+                <h2>Uma ferramenta para Gamers</h2>
+                <p>Quer uma ferramenta para ajudar a te dar uma leve mãozinha durante a jogatina? <br>Conte conosco para
+                    te ajudar a mergulhar de cabeça no mundo dos jogos.</p>
+
+                <div class="topicos">
+                    <img src="img/icon-1.png" alt="Ícone de ferramentas">
+                    <p>Ferramentas e funcionalidades</p>
+                </div>
+
+                <div class="topicos">
+                    <img src="img/icon-3.png" alt="Ícone de desempenho">
+                    <p>Maior desempenho em jogos</p>
+                </div>
+
+                <div class="topicos">
+                    <img src="img/icon-2.png" alt="Ícone de proteção contra vírus">
+                    <p>Zelo especial com a comunidade gamer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre">
+        <div class="container">
+            <div id="institucional">
+                <h2>Origami</h2>
+                <p>Sempre focando em oferecer o melhor para os gamers, nossa missão é proporcionar conforto, qualidade e
+                    desempenho para que o seu PC Gamer esteja à altura das suas expectativas. Sabemos que cada detalhe
+                    faz a diferença, desde a fluidez nas partidas até a ergonomia durante longas sessões de jogo. Por
+                    isso, trabalhamos para garantir uma experiência completa, combinando tecnologia, design funcional e
+                    soluções personalizadas que elevam seu nível de imersão e performance.</p>
+            </div>
+            <div id="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RTX2T4d2w84?si=N7C6hRHElqhxXXHb"
+                    title="Game"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Faixa de Destaque -->
+    <section id="faixaDestaque">
+        <div class="container">
+            <div id="imagemFaixa">
+                <img src="img/youtube.png" alt="Logo do YouTube">
+            </div>
+            <div id="textoFaixa">
+                <h2>Cola pra conferir mais um pouco do trampo da Origami!</h2>
+                <p>Acompanhe de perto todas as novidades e não perca nenhum detalhe sobre o Origami App!<br>
+                    Fique por dentro das atualizações mais recentes que garantem melhorias contínuas para sua
+                    experiência,<br>
+                    descubra as novas parcerias que trazem ainda mais valor para a comunidade gamer e explore conteúdos
+                    exclusivos<br>
+                    criados especialmente para você. Além disso, fique atento a eventos, promoções, dicas e muitas
+                    outras coisas<br>
+                    legais que tornam o Origami App o companheiro ideal para maximizar seu desempenho e proteger seu
+                    mundo digital.<br>
+                    Não perca nenhuma oportunidade de fazer parte dessa evolução!
+                </p>
+
+                <a href="http://youtube.com/@allangotosleep" target="_blank" class="botao">Inscrever-se</a>
+            </div>
+        </div>
+    </section>
+    <!-- Conteúdo (Cartões) -->
+    <section id="conteudo">
+        <div class="container">
+            <h2>Conteúdo</h2>
+            <div class="containerCards">
+                <div class="card">
+                    <img src="img/cpu.png" alt="cpu">
+                    <h3>Hora de tunar isso aí!</h3>
+                    <p>Contamos com um atendimento inteligente baseado em IA<br>
+                        que ajuda você a escolher as melhores peças para o seu setup. Analisando<br>
+                        as especificações atuais do seu computador, a IA identifica componentes<br>
+                        compatíveis e faz recomendações personalizadas, seja para upgrades,<br>
+                        substituições ou melhorias. Tudo é ajustado de<br>
+                        acordo com suas necessidades, garantindo as melhores escolhas sem<br>
+                        complicações.
+                    </p>
+                    <br> <!-- Quebra de linha -->
+                </div>
+                <div class="card">
+                    <img src="img/video.png" alt="video">
+                    <h3>Eu posso rodar isso?</h3>
+                    <p>Contamos com uma funcionalidade incrível que permite<br>
+                        verificar se o seu PC está pronto para rodar seus jogos favoritos.<br>
+                        Com poucos cliques, você pode analisar o desempenho do hardware, como<br>
+                        CPU, GPU e RAM, comparando-o com os requisitos dos jogos. Essa<br>
+                        ferramenta garante que você tenha a melhor experiência, sem surpresas<br>
+                        indesejadas, tudo em uma interface simples e integrada.
+
+                    </p>
+                    <br>
+                </div>
+                <div class="card">
+                    <img src="img/hardware.png" alt="hardware">
+                    <h3>Controle dos coolers</h3>
+                    <p>O Origami App oferece monitoramento dos coolers do seu PC, permitindo<br>
+                        acompanhar a velocidade dos ventiladores e manter o sistema em<br>
+                        temperaturas seguras. Assim, você evita superaquecimento e garante<br>
+                        máxima performance, tudo de forma simples no painel do app.
+
+                    </p>
+                </div>
+            </div>
+            <a href="#" id="todos">Pra saber mais >></a>
+        </div>
+    </section>
+    <!--Contato-->
+    <address>
+        <div class="container">
+        </div>
+    </address>
+
+    <section id="contato">
+        <div class="container">
+            <!-- Contato -->
+            <div class="rodape-contato">
+                <h2>Contato</h2>
+                <div class="contato-item">
+                    <img src="img/gmail.png" alt="E-mail">
+                    <a href="mailto:origamigaming@outlook.com?subject=Contato">origamigaming@outlook.com</a>
+                </div>
+                <div class="contato-item">
+                    <img src="img/whatsapp.png" alt="WhatsApp">
+                    <a href="https://api.whatsapp.com/send?phone=+55000000">+55 000-000</a>
+                </div>
+            </div>
+
+            <!-- Redes Sociais -->
+            <div class="rodape-redes">
+                <h2>Redes Sociais</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="img/instagram.png" alt="Instagram">
+                    </a>
+                    <p>@OrigamiParaGamers</p>
+                </div>
+            </div>
+
+            <!-- Mapa (opcional) -->
+            <!--
+        <div class="rodape-mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29262.213898193702!2d-46.5829888!3d-23.5405312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ecf6a8803f1%3A0x8fce814310c50f74!2sSesc%20Belenzinho!5e0!3m2!1spt-BR!2sbr!4v1733334377509!5m2!1spt-BR!2sbr"
+                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe> -->
+
+        </div>
+    </section>
+
+
+
+    <div class="container">
+        <!--Topo do site-->
+        <a href="#inicio" id="topo"><img src="img/topo.png" alt="topo"></a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div id="autor">
+                <p>
+                    © <span id="copyrightYear">2024</span> Allan Vítor
+                </p>
+                <div id="redesocial">
+                    <a href="https://github.com/HubOpsVitor" target="_blank"><img src="img/github.png" alt="github"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</html>
