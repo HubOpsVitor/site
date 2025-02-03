@@ -1,5 +1,6 @@
 /**
- * @author Luiz Damas Amorim
+ * @author Allan Vítor Siqueira Silva
+
  */
 
 // Banner carrosel ------------
