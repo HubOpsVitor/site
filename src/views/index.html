@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título que será exibido na janela -->
+    <title>VITOR TI</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../public/css/style.css">
+    <!-- impedir a execução de scripts externos ou não autorizados -->
+     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+</head>
+
+<body>
+    <div class="container button">
+        <img src="../public/img/clientes.png" alt="clientes" title="Cadastro de clientes"
+        onclick="cliente()">
+        <img src="../public/img/os.png" alt="computador" title="Emissão de OS" onclick="os()">
+    </div>
+    <footer>
+        <p id="dataAtual"></p>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="../public/js/bootstrap.min.js"></script>
+    <!-- Scripts -->
+    <script src="../public/js/script.js"></script>
+    <!--Renderizador-->
+     <script src="renderer.js"></script>
+</body>
+
+</html>
